@@ -32,14 +32,17 @@
     "egg": "^3",
     "egg-cors": "^2.2.3",
     "egg-scripts": "^2",
-    "eslint-plugin-unused-imports": "^3.0.0"
+    "egg-sequelize": "^6.0.0",
+    "eslint-plugin-unused-imports": "^3.0.0",
+    "mysql2": "^3.5.2"
   },
   "devDependencies": {
     "egg-bin": "^5",
     "egg-ci": "^2",
     "egg-mock": "^5",
     "eslint": "^8",
-    "eslint-config-egg": "^12"
+    "eslint-config-egg": "^12",
+    "sequelize-cli": "^6.6.1"
   },
   "ci": {
     "version": "16, 18",
