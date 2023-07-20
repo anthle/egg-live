@@ -1,27 +1,27 @@
 /* eslint valid-jsdoc: "off" */
 
-'use strict';
+'use strict'
 
 /**
  * @param {Egg.EggAppInfo} appInfo app info
  */
-module.exports = appInfo => {
+module.exports = (appInfo) => {
   /**
    * built-in config
    * @type {Egg.EggAppConfig}
    **/
-  const config = exports = {};
+  const config = exports = {}
 
   // use for cookie sign key, should change to your own and keep security
-  config.keys = appInfo.name + '_1689859901495_4488';
+  config.keys = `${appInfo.name}_1689859901495_4488`
 
   // add your middleware config here
-  config.middleware = [];
+  config.middleware = ['errorHandler']
 
   // add your user config here
   const userConfig = {
     // myAppName: 'egg',
-  };
+  }
 
   config.security = {
     // 关闭 csrf
@@ -29,16 +29,16 @@ module.exports = appInfo => {
       enable: false,
     },
     // 跨域白名单
-    domainWhiteList: [ 'http://localhost:3000' ],
-  };
+    domainWhiteList: ['http://localhost:3000'],
+  }
   // 允许跨域的方法
   config.cors = {
     origin: '*',
     allowMethods: 'GET, PUT, POST, DELETE, PATCH',
-  };
+  }
 
   return {
     ...config,
     ...userConfig,
-  };
-};
+  }
+}

@@ -1,22 +1,16 @@
 {
   "name": "live",
   "version": "1.0.0",
-  "description": "",
   "private": true,
+  "description": "",
   "egg": {
     "declarations": true
   },
-  "dependencies": {
-    "egg": "^3",
-    "egg-cors": "^2.2.3",
-    "egg-scripts": "^2"
-  },
-  "devDependencies": {
-    "egg-bin": "^5",
-    "egg-ci": "^2",
-    "egg-mock": "^5",
-    "eslint": "^8",
-    "eslint-config-egg": "^12"
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": ""
   },
   "engines": {
     "node": ">=16.0.0"
@@ -30,16 +24,25 @@
     "test-local": "egg-bin test",
     "cov": "egg-bin cov",
     "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "ci": "npm run lint && npm run cov"
+  },
+  "dependencies": {
+    "@antfu/eslint-config": "^0.39.8",
+    "egg": "^3",
+    "egg-cors": "^2.2.3",
+    "egg-scripts": "^2",
+    "eslint-plugin-unused-imports": "^3.0.0"
+  },
+  "devDependencies": {
+    "egg-bin": "^5",
+    "egg-ci": "^2",
+    "egg-mock": "^5",
+    "eslint": "^8",
+    "eslint-config-egg": "^12"
   },
   "ci": {
     "version": "16, 18",
     "type": "github"
-  },
-  "repository": {
-    "type": "git",
-    "url": ""
-  },
-  "author": "",
-  "license": "MIT"
+  }
 }
