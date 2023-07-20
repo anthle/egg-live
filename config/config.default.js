@@ -61,6 +61,23 @@ module.exports = (appInfo) => {
     },
   }
 
+  // 指定模板引擎
+  config.view = {
+    mapping: {
+      '.html': 'nunjucks',
+    },
+  }
+
+  // 参数验证
+  config.valparams = {
+    locale: 'zh-cn',
+    throwError: true,
+  }
+
+  config.crypto = {
+    secret: 'qhdgw@45ncashdaksh2!#@3nxjdas*_672',
+  }
+
   return {
     ...config,
     ...userConfig,
