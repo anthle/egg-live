@@ -47,10 +47,10 @@
         <div class="page-header">
           <div class="row align-items-center">
             <div class="col">
-              <h3 class="page-title">管理员管理</h3>
+              <h3 class="page-title"> {{ title }} </h3>
               <ul class="breadcrumb">
-                <li class="breadcrumb-item"><a href="index.html">后台首页</a></li>
-                <li class="breadcrumb-item active">管理员管理</li>
+                <li class="breadcrumb-item"><a href="/admin.html">后台首页</a></li>
+                <li class="breadcrumb-item active"> {{ title }} </li>
               </ul>
             </div>
           </div>
@@ -59,7 +59,13 @@
         <div class="row">
           <div class="col-sm-12">
 
-            {% block main %}{% endblock %}
+            {% block main %}
+              {% if tempType === 'form' %}
+                {% include 'admin/layout/_form.html' %}
+              {% else %}
+                {% include 'admin/layout/_table.html' %}
+              {% endif %}
+            {% endblock %}
 
           </div>
         </div>

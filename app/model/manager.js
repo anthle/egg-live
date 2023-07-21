@@ -28,7 +28,12 @@ module.exports = (app) => {
         this.setDataValue('password', hash)
       },
     },
-    created_time: DATE,
+    created_time: {
+      type: DATE,
+      get() {
+        return app.formatTime(this.getDataValue('created_time'))
+      },
+    },
     updated_time: DATE,
   })
   return Manager
